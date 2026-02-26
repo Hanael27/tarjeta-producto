@@ -1,0 +1,70 @@
+// Variables
+$primary-color: #3498db;
+$primary-hover: #2980b9;
+$text-color: #555;
+$border-color: #ddd;
+
+// Mixin
+@mixin smooth-transition($property) {
+  transition: $property 0.3s ease;
+}
+
+// Placeholder extend
+%flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// Card Block (BEM)
+.card {
+
+  &--product {
+    @extend %flex-column;
+    border: 1px solid $border-color;
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 300px;
+    margin: 0 auto;
+    @include smooth-transition(transform);
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  &__image {
+    width: 150px;
+    height: auto;
+  }
+
+  &__content {
+    padding: 1rem;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 1.3rem;
+  }
+
+  &__description {
+    color: $text-color;
+    margin: 0.5rem 0 1rem 0;
+  }
+
+  &__button {
+    background-color: $primary-color;
+    border: none;
+    @include smooth-transition(background-color);
+
+    &:hover {
+      background-color: $primary-hover;
+    }
+  }
+}

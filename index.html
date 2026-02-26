@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tarjeta Producto</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap 4 -->
+  <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+  <!-- CSS compilado -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container mt-5">
+
+  <div class="card card--product">
+
+    <div class="card__image-container">
+      <img src="IMG/PC.png" alt="Producto" class="card__image">
+    </div>
+
+    <div class="card__content">
+      <h3 class="card__title">Laptop Gamer</h3>
+      <p class="card__description">
+        Potente laptop con 16GB RAM y RTX 4060.
+      </p>
+
+      <button class="card__button btn btn-primary"
+              data-toggle="modal"
+              data-target="#productoModal">
+        Detalles
+      </button>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade"
+     id="productoModal"
+     tabindex="-1"
+     role="dialog">
+
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Detalles del Producto</h5>
+        <button type="button"
+                class="close"
+                data-dismiss="modal">
+          <span>&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <p>
+          Esta laptop incluye procesador i7,
+          16GB RAM, SSD 1TB y tarjeta gráfica dedicada.
+        </p>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal">
+          Cerrar
+        </button>
+
+        <button type="button"
+                class="btn btn-primary">
+          Comprar
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Scripts Bootstrap 4 -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>
